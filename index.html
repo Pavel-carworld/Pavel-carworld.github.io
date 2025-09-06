@@ -3,79 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{NAZWA STO}} — Serwis samochodowy | {{MIASTO}}, Polska</title>
-  <meta name="description" content="Profesjonalny serwis samochodowy: diagnostyka, mechanika, wymiana oleju, hamulce, zawieszenie, klimatyzacja. Szybko, uczciwie i w dobrej cenie." />
-  <meta property="og:title" content="{{NAZWA STO}} — Serwis samochodowy" />
-  <meta property="og:description" content="Mechanik w {{MIASTO}}. Zadzwoń: {{TELEFON}}" />
+  <title>Warsztat Samochodowy — Serwis i Wulkanizacja | Kiekrz</title>
+  <meta name="description" content="Serwis samochodowy, diagnostyka komputerowa, mechanika, wymiana oleju, wulkanizacja. Kiekrz, Poznańska 23. Telefon: +48 662 839 284" />
+  <meta property="og:title" content="Warsztat Samochodowy — Serwis i Wulkanizacja" />
+  <meta property="og:description" content="Kiekrz, Poznańska 23. Zadzwoń: +48 662 839 284" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pl_PL" />
   <meta name="theme-color" content="#0ea5e9" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%230ea5e9' d='M24 88h80l12-24-12-24H24L12 64z'/%3E%3Ccircle cx='40' cy='88' r='12' fill='%23000'/%3E%3Ccircle cx='88' cy='88' r='12' fill='%23000'/%3E%3C/svg%3E" />
   <style>
-    :root{--bg:#0b1220;--fg:#f7fafc;--muted:#cbd5e1;--pri:#0ea5e9;--pri-2:#38bdf8;--card:#111827;--ok:#22c55e;--warn:#f59e0b;--err:#ef4444}
-    *{box-sizing:border-box}
-    html,body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,'Noto Sans',sans-serif;background:linear-gradient(180deg,#0b1220 0%,#0b1220 60%,#0e1726 100%);color:var(--fg);}
-    a{color:var(--pri)}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
-    header{position:sticky;top:0;background:rgba(11,18,32,.7);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08);z-index:50}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px}
-    .brand svg{width:28px;height:28px}
-    .lang{display:flex;gap:8px}
-    .lang button{background:transparent;border:1px solid rgba(255,255,255,.18);color:var(--fg);padding:6px 10px;border-radius:10px;cursor:pointer}
-    .lang button.active{border-color:var(--pri);box-shadow:0 0 0 2px rgba(14,165,233,.25) inset}
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:40px 0}
-    .hero .copy h1{font-size:clamp(28px,4vw,44px);line-height:1.12;margin:.1em 0 .3em}
-    .hero .copy p{color:var(--muted);font-size:clamp(15px,2.2vw,18px)}
-    .badges{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
-    .badge{background:linear-gradient(180deg,#111827,#0f172a);border:1px solid rgba(255,255,255,.08);padding:8px 12px;border-radius:999px;font-size:13px}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-    .btn{appearance:none;border:none;border-radius:12px;padding:12px 16px;font-weight:700;cursor:pointer;transition:.18s;display:inline-flex;align-items:center;gap:10px}
-    .btn svg{width:18px;height:18px}
-    .btn.primary{background:linear-gradient(180deg,var(--pri),var(--pri-2));color:#001018}
-    .btn.secondary{background:transparent;color:var(--fg);border:1px solid rgba(255,255,255,.2)}
-    .card{background:linear-gradient(180deg,#0d1425,#0b1324);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px}
-    .grid{display:grid;gap:16px}
-    .services{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
-    .section h2{font-size:clamp(22px,3vw,30px);margin:8px 0 2px}
-    .muted{color:var(--muted)}
-    .price-item{display:flex;justify-content:space-between;gap:16px;padding:10px 12px;border-radius:12px;border:1px dashed rgba(255,255,255,.1)}
-    .price-item b{font-weight:700}
-    .two-col{grid-template-columns:1fr 1fr}
-    .hours{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:8px}
-    .map{aspect-ratio:16/10;border:0;width:100%;border-radius:14px;filter:saturate(1.05)}
-    footer{margin-top:36px;padding:18px 0;border-top:1px solid rgba(255,255,255,.08);font-size:14px;color:#a8b3c7}
-    .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.03)}
-    .kpis{display:flex;gap:10px;flex-wrap:wrap}
-    @media (max-width:900px){.hero{grid-template-columns:1fr}}
+    body {font-family: Arial, sans-serif; margin:0; background:#0b1220; color:#f7fafc;}
+    header {background:#0e1726; padding:15px; position:sticky; top:0;}
+    header .nav {display:flex; justify-content:space-between; align-items:center; max-width:1100px; margin:0 auto;}
+    .brand {font-weight:700; font-size:20px;}
+    .lang button {margin-left:8px; padding:6px 12px; border-radius:6px; border:1px solid #38bdf8; background:transparent; color:#f7fafc; cursor:pointer;}
+    .lang button.active {background:#38bdf8; color:#000;}
+    main {max-width:1100px; margin:0 auto; padding:20px;}
+    h1 {font-size:28px; margin:10px 0;}
+    h2 {margin-top:30px; border-bottom:1px solid #38bdf8; padding-bottom:6px;}
+    .price-list {margin-top:10px;}
+    .price-item {display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px dashed rgba(255,255,255,.2);}
+    .contact, .hours {margin-top:10px;}
+    .map {margin-top:20px; width:100%; height:300px; border:0; border-radius:10px;}
+    footer {margin-top:40px; padding:15px; background:#0e1726; text-align:center; font-size:14px; color:#aaa;}
   </style>
-  <script type="application/ld+json" id="schema">
-  {
-    "@context": "https://schema.org",
-    "@type": "AutoRepair",
-    "name": "{{NAZWA STO}}",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "{{ULICA I NUMER}}",
-      "addressLocality": "{{MIASTO}}",
-      "postalCode": "{{KOD POCZTOWY}}",
-      "addressCountry": "PL"
-    },
-    "telephone": "{{TELEFON}}",
-    "openingHours": ["Mo-Fr 09:00-18:00", "Sa 10:00-14:00"],
-    "url": "https://{{USERNAME}}.github.io/",
-    "priceRange": "$$",
-    "image": "https://{{USERNAME}}.github.io/og.jpg"
-  }
-  </script>
 </head>
 <body>
   <header>
-    <div class="container nav">
-      <div class="brand">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 13c0-2.828 0-4.243.879-5.121C4.757 7 6.172 7 9 7h6c2.828 0 4.243 0 5.121.879C21 8.757 21 10.172 21 13v1.5c0 1.657-1.343 3-3 3h-1.76a3 3 0 0 1-2.683-1.657l-.274-.549A3 3 0 0 0 10.6 13H3Z" fill="currentColor"/><circle cx="7.5" cy="17.5" r="1.5" fill="currentColor"/><circle cx="16.5" cy="17.5" r="1.5" fill="currentColor"/></svg>
-        <span id="brand">{{NAZWA STO}}</span>
-      </div>
+    <div class="nav">
+      <div class="brand">Warsztat Samochodowy</div>
       <div class="lang">
         <button class="active" data-lang="pl">PL</button>
         <button data-lang="ru">RU</button>
@@ -83,290 +38,108 @@
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero card">
-      <div class="copy">
-        <div class="badges">
-          <span class="pill" id="kpi1">⏱️ Szybkie terminy</span>
-          <span class="pill" id="kpi2">✅ Gwarancja na usługi</span>
-          <span class="pill" id="kpi3">💬 PL / RU</span>
-        </div>
-        <h1 id="h1">Serwis samochodowy w {{MIASTO}}</h1>
-        <p id="hero-p">Diagnostyka komputerowa, mechanika, wymiana oleju, hamulce, zawieszenie, klimatyzacja. Uczciwie, na czas i w rozsądnej cenie.</p>
-        <div class="cta">
-          <a id="call" class="btn primary" href="tel:{{TELEFON}}" rel="nofollow">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M2 5a2 2 0 0 1 2-2h1.5a2 2 0 0 1 2 1.6l.5 2.5a2 2 0 0 1-.52 1.82l-1.1 1.1a16 16 0 0 0 6.2 6.2l1.1-1.1a2 2 0 0 1 1.82-.52l2.5.5a2 2 0 0 1 1.6 2V20a2 2 0 0 1-2 2h-.5C9.268 22 2 14.732 2 5.5V5Z"/></svg>
-            <span>Zadzwoń: {{TELEFON}}</span>
-          </a>
-          <a id="whatsapp" class="btn secondary" href="https://wa.me/{{TELEFON_BEZ_PLUS}}" target="_blank" rel="noopener">WhatsApp</a>
-          <a id="mapsbtn" class="btn secondary" href="https://www.google.com/maps/search/?api=1&query={{URL_ENCODED_ADRES}}" target="_blank" rel="noopener">Mapa / Dojazd</a>
-        </div>
-      </div>
-      <div>
-        <picture>
-          <source type="image/svg+xml" srcset="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 420'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%230ea5e9'/%3E%3Cstop offset='1' stop-color='%2338bdf8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' rx='18' ry='18' fill='%230e1726'/%3E%3Cpath d='M80 280h480l40-80-40-80H80L40 200z' fill='url(%23g)' opacity='.8'/%3E%3Ccircle cx='160' cy='300' r='30' fill='%23fff'/%3E%3Ccircle cx='480' cy='300' r='30' fill='%23fff'/%3E%3Ctext x='50%' y='70' text-anchor='middle' fill='%23cbd5e1' font-size='28' font-family='Arial,Helvetica,sans-serif'%3E{{NAZWA STO}}%3C/text%3E%3C/svg%3E" />
-          <img alt="Ilustracja serwisu samochodowego" style="width:100%;border-radius:16px;border:1px solid rgba(255,255,255,.08)" src="https://picsum.photos/800/520?random=22" />
-        </picture>
-      </div>
-    </section>
+  <main>
+    <h1 id="h1">Serwis samochodowy i wulkanizacja — Kiekrz</h1>
+    <p id="hero-p">Diagnostyka, mechanika, wymiana oleju, wulkanizacja, naprawy. Uczciwie, terminowo i w dobrej cenie.</p>
 
-    <section class="section">
-      <h2 id="services-h2">Usługi</h2>
-      <p class="muted" id="services-p">Najczęściej wybierane naprawy i przeglądy. Zapytaj o wycenę telefonicznie lub na WhatsApp.</p>
-      <div class="grid services">
-        <div class="card"><b id="s1">Diagnostyka komputerowa</b><p class="muted" id="s1d">Odczyt błędów, kasowanie, analiza parametrów.</p></div>
-        <div class="card"><b id="s2">Wymiana oleju i filtrów</b><p class="muted" id="s2d">Szybka wymiana, właściwe specyfikacje.</p></div>
-        <div class="card"><b id="s3">Hamulce</b><p class="muted" id="s3d">Tarcze, klocki, przewody, odpowietrzanie.</p></div>
-        <div class="card"><b id="s4">Zawieszenie</b><p class="muted" id="s4d">Amortyzatory, łączniki, wahacze, sprężyny.</p></div>
-        <div class="card"><b id="s5">Klimatyzacja</b><p class="muted" id="s5d">Nabijanie, odgrzybianie, naprawy układu.</p></div>
-        <div class="card"><b id="s6">Rozrząd</b><p class="muted" id="s6d">Wymiana zestawów paskowych/łańcuchowych.</p></div>
-      </div>
-    </section>
+    <h2 id="services-h2">Cennik usług</h2>
+    <div class="price-list">
+      <div class="price-item"><span>Diagnostyka podwozie</span><b>100 zł</b></div>
+      <div class="price-item"><span>Diagnostyka komputerowa</span><b>150 zł</b></div>
+      <div class="price-item"><span>Wymiana oleju</span><b>od 150 zł</b></div>
+      <div class="price-item"><span>Wymiana klocków</span><b>od 150 zł</b></div>
+      <div class="price-item"><span>Wymiana sprzęgła</span><b>od 600 zł</b></div>
+      <div class="price-item"><span>Wymiana rozrządu</span><b>od 800 zł</b></div>
+      <div class="price-item"><span>Wymiana paska alternatora</span><b>od 50 zł</b></div>
+      <div class="price-item"><span>Wymiana żarówki</span><b>od 30 zł</b></div>
+      <div class="price-item"><span>Wymiana silnika</span><b>od 2000 zł</b></div>
+      <div class="price-item"><span>Naprawa turbiny</span><b>od 1000 zł</b></div>
+      <div class="price-item"><span>Naprawa maglownicy</span><b>od 500 zł</b></div>
+      <div class="price-item"><span>Naprawa generatora/rozrusznika</span><b>od 150 zł</b></div>
+      <div class="price-item"><span>Naprawa układu wydechowego</span><b>od 100 zł</b></div>
+      <div class="price-item"><span>Stawka godzinowa</span><b>180 zł/godz. brutto</b></div>
+      <div class="price-item"><span>Wizyta mechanika</span><b>od 200 zł</b></div>
+    </div>
 
-    <section class="section grid two-col" style="margin-top:14px">
-      <div class="card">
-        <h2 id="prices-h2">Cennik orientacyjny</h2>
-        <div class="grid" style="gap:10px">
-          <div class="price-item"><span id="p1">Diagnostyka komputerowa</span><b>od 100 zł</b></div>
-          <div class="price-item"><span id="p2">Wymiana oleju + filtr</span><b>od 120 zł</b></div>
-          <div class="price-item"><span id="p3">Wymiana klocków (oś)</span><b>od 120 zł</b></div>
-          <div class="price-item"><span id="p4">Amortyzator (1 szt.)</span><b>od 150 zł</b></div>
-          <div class="price-item"><span id="p5">Nabicie klimy</span><b>od 180 zł</b></div>
-        </div>
-        <p class="muted" id="prices-note" style="margin-top:8px">* Ostateczna cena po oględzinach. Części według życzenia: OEM / zamienniki.</p>
-      </div>
-      <div class="card">
-        <h2 id="contact-h2">Kontakt i godziny</h2>
-        <div class="kpis">
-          <span class="pill">📞 <span id="phone-pill">{{TELEFON}}</span></span>
-          <span class="pill">📍 <span id="addr-pill">{{ULICA I NUMER}}, {{MIASTO}}</span></span>
-        </div>
-        <div class="hours">
-          <span id="h-mo">Poniedziałek–Piątek</span><span><b>09:00–18:00</b></span>
-          <span id="h-sa">Sobota</span><span><b>10:00–14:00</b></span>
-          <span id="h-su">Niedziela</span><span><b>Nieczynne</b></span>
-        </div>
-        <div class="cta" style="margin-top:12px">
-          <a class="btn primary" href="mailto:{{EMAIL}}">E-mail</a>
-          <a class="btn secondary" href="https://wa.me/{{TELEFON_BEZ_PLUS}}" target="_blank">WhatsApp</a>
-        </div>
-      </div>
-    </section>
+    <h2 id="wulkanizacja-h2">Wulkanizacja</h2>
+    <div class="price-list">
+      <div class="price-item"><span>Łatka</span><b>od 70 zł</b></div>
+      <div class="price-item"><span>Koronka</span><b>40 zł</b></div>
+      <div class="price-item"><span>Skrawek</span><b>od 100 zł</b></div>
+      <div class="price-item"><span>Wymiana zaworu</span><b>20 zł</b></div>
+      <div class="price-item"><span>Wyważanie kół</span><b>od 25 zł</b></div>
+      <div class="price-item"><span>Wymiana koła</span><b>20 zł</b></div>
+      <div class="price-item"><span>Wymiana opony R13–R14</span><b>37,5 zł</b></div>
+      <div class="price-item"><span>R15</span><b>40 zł</b></div>
+      <div class="price-item"><span>R16</span><b>40 zł</b></div>
+      <div class="price-item"><span>R17</span><b>45 zł</b></div>
+      <div class="price-item"><span>R18</span><b>45 zł</b></div>
+      <div class="price-item"><span>R19</span><b>50 zł</b></div>
+      <div class="price-item"><span>R20</span><b>55 zł</b></div>
+      <div class="price-item"><span>R21</span><b>60 zł</b></div>
+      <div class="price-item"><span>Niski profil</span><b>+5 zł/opona</b></div>
+      <div class="price-item"><span>Runflat</span><b>+10 zł/opona</b></div>
+    </div>
 
-    <section class="section" style="margin-top:14px">
-      <h2 id="map-h2">Gdzie jesteśmy</h2>
-      <iframe class="map" id="mapFrame" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q={{URL_ENCODED_ADRES}}&output=embed"></iframe>
-    </section>
+    <h2>Mycie samochodu</h2>
+    <div class="price-list">
+      <div class="price-item"><span>Mycie samochodu</span><b>od 100 zł</b></div>
+    </div>
+
+    <h2 id="contact-h2">Kontakt</h2>
+    <div class="contact">
+      <p><b>Adres:</b> Poznańska 23, 62-090 Kiekrz</p>
+      <p><b>Telefon:</b> <a href="tel:+48662839284">+48 662 839 284</a></p>
+      <p><b>Email:</b> <a href="mailto:kontakt@example.com">kontakt@example.com</a></p>
+      <p><b>NIP:</b> 7792561277</p>
+    </div>
+
+    <h2 id="map-h2">Mapa</h2>
+    <iframe class="map" src="https://www.google.com/maps?q=Poznańska+23,+Kiekrz&output=embed"></iframe>
   </main>
 
-  <footer class="container">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
-      <span>© <span id="year"></span> {{NAZWA STO}} — {{MIASTO}} | NIP: {{NIP (opcjonalnie)}} </span>
-      <span class="muted" id="dev">Made with ❤ on GitHub Pages</span>
-    </div>
+  <footer>
+    © <span id="year"></span> Warsztat Samochodowy — Kiekrz | NIP: 7792561277
   </footer>
 
   <script>
-    // ======= KONFIGURACJA — PODMIEŃ NA SWOJE DANE =======
-    const CONFIG = {
-      NAME: "{{NAZWA STO}}",
-      CITY: "{{MIASTO}}",
-      ADDRESS: "{{ULICA I NUMER}}",
-      ZIP: "{{KOD POCZTOWY}}",
-      PHONE: "+48 600 000 000",
-      PHONE_RAW: "48600000000", // bez plusa i spacji, do WhatsApp
-      EMAIL: "kontakt@example.com",
-      NIP: "", // np. 123-45-67-890
-      USERNAME: "{{USERNAME}}" // nazwa GitHub (do uzupełnienia w JSON-LD)
-    }
+    // Ustawienie roku w stopce
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-  <script>
-  // ======= КОНФИГ — подставь свои данные =======
-  const CONFIG = {
-    NAME: "Pavel CarWorld — Serwis",
-    CITY: "Poznań",
-    ADDRESS: "ul. Przykładowa 12",
-    ZIP: "60-001",
-    PHONE: "+48 662 957 444",
-    PHONE_RAW: "48662957444", // только цифры, без +
-    EMAIL: "kontakt@example.com",
-    NIP: "",                  // можно пусто
-    USERNAME: "Pavel-carworld" // твой логин GitHub (точно как в адресе)
-  };
-
-  // ——— Переводы PL/RU
-  const T = {
-    pl: {
-      kpi1:"⏱️ Szybkie terminy", kpi2:"✅ Gwarancja na usługi", kpi3:"💬 PL / RU",
-      h1:`Serwis samochodowy w ${CONFIG.CITY}`,
-      hero_p:"Diagnostyka komputerowa, mechanika, wymiana oleju, hamulce, zawieszenie, klimatyzacja. Uczciwie, na czas i w rozsądnej cenie.",
-      services_h2:"Usługi", services_p:"Najczęściej wybierane naprawy i przeglądy. Zapytaj o wycenę telefonicznie lub na WhatsApp.",
-      s1:"Diagnostyka komputerowa", s1d:"Odczyt błędów, kasowanie, analiza parametrów.",
-      s2:"Wymiana oleju i filtrów", s2d:"Szybka wymiana, właściwe specyfikacje.",
-      s3:"Hamulce", s3d:"Tarcze, klocki, przewody, odpowietrzanie.",
-      s4:"Zawieszenie", s4d:"Amortyzatory, łączniki, wahacze, sprężyny.",
-      s5:"Klimatyzacja", s5d:"Nabijanie, odgrzybianie, naprawy układu.",
-      s6:"Rozrząd", s6d:"Wymiana zestawów paskowych/łańcuchowych.",
-      prices_h2:"Cennik orientacyjny",
-      prices_note:"* Ostateczna cena po oględzinach. Części według życzenia: OEM / zamienniki.",
-      contact_h2:"Kontakt i godziny",
-      map_h2:"Gdzie jesteśmy",
-      h_mo:"Poniedziałek–Piątek", h_sa:"Sobota", h_su:"Niedziela"
-    },
-    ru: {
-      kpi1:"⏱️ Быстрые сроки", kpi2:"✅ Гарантия на работы", kpi3:"💬 PL / RU",
-      h1:`Автосервис w ${CONFIG.CITY}`,
-      hero_p:"Компьютерная диагностика, механика, замена масла, тормоза, подвеска, кондиционер. Честно, вовремя и по разумной цене.",
-      services_h2:"Услуги", services_p:"Самые популярные работы и осмотры. Спрашивайте цену по телефону или в WhatsApp.",
-      s1:"Компьютерная диагностика", s1d:"Чтение ошибок, сброс, анализ параметров.",
-      s2:"Замена масла i фильтров", s2d:"Быстрая замена, правильные спецификации.",
-      s3:"Тормоза", s3d:"Диски, колодки, шланги, прокачка.",
-      s4:"Подвеска", s4d:"Амортизаторы, стойки, рычаги, пружины.",
-      s5:"Кондиционер", s5d:"Заправка, чистка, ремонт узлов.",
-      s6:"ГРМ", s6d:"Замена ременных/цепных комплектов.",
-      prices_h2:"Ориентировочный прайс",
-      prices_note:"* Итоговая цена после осмотра. Детали по желанию: оригинал / аналоги.",
-      contact_h2:"Контакты и часы",
-      map_h2:"Где мы находимся",
-      h_mo:"Понедельник–Пятница", h_sa:"Суббота", h_su:"Воскресенье"
-    }
-  };
-
-  // ——— Инициализация страницы
-  (function(){
-    // Заголовки/кнопки/карта из CONFIG
-    document.getElementById('brand').textContent = CONFIG.NAME;
-    document.title = `${CONFIG.NAME} — Serwis samochodowy | ${CONFIG.CITY}, Polska`;
-    document.getElementById('phone-pill').textContent = CONFIG.PHONE;
-    document.getElementById('addr-pill').textContent = `${CONFIG.ADDRESS}, ${CONFIG.CITY}`;
-    document.getElementById('call').href = `tel:${CONFIG.PHONE.replace(/\s/g,'')}`;
-    document.getElementById('whatsapp').href = `https://wa.me/${CONFIG.PHONE_RAW}`;
-    document.getElementById('mapsbtn').href =
-      `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONFIG.ADDRESS+', '+CONFIG.CITY)}`;
-    document.getElementById('mapFrame').src =
-      `https://www.google.com/maps?q=${encodeURIComponent(CONFIG.ADDRESS+', '+CONFIG.CITY)}&output=embed`;
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const emailBtn = document.querySelector('a[href^="mailto:"]');
-    if (emailBtn) emailBtn.href = `mailto:${CONFIG.EMAIL}`;
-
-    // Функция применения языка
-    function applyLang(lang){
-      const t = T[lang] || T.pl;
-      document.documentElement.lang = (lang === 'ru' ? 'ru' : 'pl');
-
-      document.getElementById('kpi1').textContent=t.kpi1;
-      document.getElementById('kpi2').textContent=t.kpi2;
-      document.getElementById('kpi3').textContent=t.kpi3;
-      document.getElementById('h1').textContent=t.h1;
-      document.getElementById('hero-p').textContent=t.hero_p;
-      document.getElementById('services-h2').textContent=t.services_h2;
-      document.getElementById('services-p').textContent=t.services_p;
-      document.getElementById('s1').textContent=t.s1;  document.getElementById('s1d').textContent=t.s1d;
-      document.getElementById('s2').textContent=t.s2;  document.getElementById('s2d').textContent=t.s2d;
-      document.getElementById('s3').textContent=t.s3;  document.getElementById('s3d').textContent=t.s3d;
-      document.getElementById('s4').textContent=t.s4;  document.getElementById('s4d').textContent=t.s4d;
-      document.getElementById('s5').textContent=t.s5;  document.getElementById('s5d').textContent=t.s5d;
-      document.getElementById('s6').textContent=t.s6;  document.getElementById('s6d').textContent=t.s6d;
-      document.getElementById('prices-h2').textContent=t.prices_h2;
-      document.getElementById('prices-note').textContent=t.prices_note;
-      document.getElementById('contact-h2').textContent=t.contact_h2;
-      document.getElementById('map-h2').textContent=t.map_h2;
-      document.getElementById('h-mo').textContent=t.h_mo;
-      document.getElementById('h-sa').textContent=t.h_sa;
-      document.getElementById('h-su').textContent=t.h_su;
-
-      // Кнопки активные
-      document.querySelectorAll('.lang button').forEach(b=>{
-        b.classList.toggle('active', b.dataset.lang===lang);
-      });
-    }
-
-    // Язык по умолчанию и клик по кнопкам
-    applyLang('pl');
-    document.querySelectorAll('.lang button').forEach(btn=>{
-      btn.addEventListener('click', ()=> applyLang(btn.dataset.lang));
-    });
-
-    // Обновим JSON-LD (schema.org)
-    try {
-      const schemaEl = document.getElementById('schema');
-      const schema = JSON.parse(schemaEl.textContent);
-      schema.name = CONFIG.NAME;
-      schema.address.streetAddress = CONFIG.ADDRESS;
-      schema.address.addressLocality = CONFIG.CITY;
-      schema.address.postalCode = CONFIG.ZIP;
-      schema.telephone = CONFIG.PHONE;
-      schema.url = `https://${CONFIG.USERNAME}.github.io/`;
-      schemaEl.textContent = JSON.stringify(schema);
-    } catch(e){}
-  })();
-</script>
-  <script>
-    // ————— Init: wypełnij dane i tłumaczenia, bez frameworków
-    (function(){
-      // Uzupełnij statyczne pola z CONFIG
-      document.getElementById('brand').textContent = CONFIG.NAME;
-      document.title = `${CONFIG.NAME} — Serwis samochodowy | ${CONFIG.CITY}, Polska`;
-      document.getElementById('phone-pill').textContent = CONFIG.PHONE;
-      document.getElementById('addr-pill').textContent = `${CONFIG.ADDRESS}, ${CONFIG.CITY}`;
-      document.getElementById('call').href = `tel:${CONFIG.PHONE.replace(/\s/g,'')}`;
-      document.getElementById('whatsapp').href = `https://wa.me/${CONFIG.PHONE_RAW}`;
-      document.getElementById('mapsbtn').href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONFIG.ADDRESS+', '+CONFIG.CITY)}`;
-      document.getElementById('mapFrame').src = `https://www.google.com/maps?q=${encodeURIComponent(CONFIG.ADDRESS+', '+CONFIG.CITY)}&output=embed`;
-      document.getElementById('year').textContent = new Date().getFullYear();
-      // E-mail CTA
-      const emailBtn = document.querySelector('a[href^="mailto:"]');
-      if (emailBtn) emailBtn.href = `mailto:${CONFIG.EMAIL}`;
-
-      // Bezpieczne wstrzyknięcie tłumaczeń (IDs z myślnikami pobieramy przez getElementById)
-      const langInit = {
-        set(lang){
-          const t=T[lang];
-          if(!t) return;
-          document.getElementById('kpi1').textContent=t.kpi1;
-          document.getElementById('kpi2').textContent=t.kpi2;
-          document.getElementById('kpi3').textContent=t.kpi3;
-          document.getElementById('h1').textContent=t.h1;
-          document.getElementById('hero-p').textContent=t.hero_p;
-          document.getElementById('services-h2').textContent=t.services_h2;
-          document.getElementById('services-p').textContent=t.services_p;
-          document.getElementById('s1').textContent=t.s1; document.getElementById('s1d').textContent=t.s1d;
-          document.getElementById('s2').textContent=t.s2; document.getElementById('s2d').textContent=t.s2d;
-          document.getElementById('s3').textContent=t.s3; document.getElementById('s3d').textContent=t.s3d;
-          document.getElementById('s4').textContent=t.s4; document.getElementById('s4d').textContent=t.s4d;
-          document.getElementById('s5').textContent=t.s5; document.getElementById('s5d').textContent=t.s5d;
-          document.getElementById('s6').textContent=t.s6; document.getElementById('s6d').textContent=t.s6d;
-          document.getElementById('prices-h2').textContent=t.prices_h2;
-          document.getElementById('prices-note').textContent=t.prices_note;
-          document.getElementById('contact-h2').textContent=t.contact_h2;
-          document.getElementById('map-h2').textContent=t.map_h2;
-          document.getElementById('h-mo').textContent=t.h_mo;
-          document.getElementById('h-sa').textContent=t.h_sa;
-          document.getElementById('h-su').textContent=t.h_su;
-        }
+    // Tłumaczenia PL/RU
+    const T = {
+      pl: {
+        h1: "Serwis samochodowy i wulkanizacja — Kiekrz",
+        hero_p: "Diagnostyka, mechanika, wymiana oleju, wulkanizacja, naprawy. Uczciwie, terminowo i w dobrej cenie.",
+        services_h2: "Cennik usług",
+        wulkanizacja_h2: "Wulkanizacja",
+        contact_h2: "Kontakt",
+        map_h2: "Mapa"
+      },
+      ru: {
+        h1: "Автосервис и вулканизация — Кекш",
+        hero_p: "Диагностика, механика, замена масла, вулканизация, ремонты. Честно, вовремя и по разумной цене.",
+        services_h2: "Прайс-лист услуг",
+        wulkanizacja_h2: "Вулканизация",
+        contact_h2: "Контакты",
+        map_h2: "Карта"
       }
+    };
 
-      // Domyślnie PL
-      langInit.set('pl');
-      document.querySelectorAll('.lang button').forEach(btn=>{
-        btn.addEventListener('click',()=>{
-          langInit.set(btn.dataset.lang);
-          document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('active', b===btn));
-        })
+    document.querySelectorAll(".lang button").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        document.querySelectorAll(".lang button").forEach(b=>b.classList.remove("active"));
+        btn.classList.add("active");
+        const t=T[btn.dataset.lang];
+        if(!t) return;
+        document.getElementById("h1").textContent = t.h1;
+        document.getElementById("hero-p").textContent = t.hero_p;
+        document.getElementById("services-h2").textContent = t.services_h2;
+        document.getElementById("wulkanizacja-h2").textContent = t.wulkanizacja_h2;
+        document.getElementById("contact-h2").textContent = t.contact_h2;
+        document.getElementById("map-h2").textContent = t.map_h2;
       })
-
-      // Podmień JSON-LD na podstawie CONFIG
-      try {
-        const schema = JSON.parse(document.getElementById('schema').textContent);
-        schema.name = CONFIG.NAME;
-        schema.address.streetAddress = CONFIG.ADDRESS;
-        schema.address.addressLocality = CONFIG.CITY;
-        schema.postalCode = CONFIG.ZIP;
-        schema.telephone = CONFIG.PHONE;
-        schema.url = `https://${CONFIG.USERNAME}.github.io/`;
-        document.getElementById('schema').textContent = JSON.stringify(schema);
-      } catch(e){}
-    })();
+    });
   </script>
 </body>
 </html>
