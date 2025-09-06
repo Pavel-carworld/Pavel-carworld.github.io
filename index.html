@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pl">
 <head>
@@ -33,16 +34,21 @@
     .lang{display:flex;gap:8px}
     .lang button{background:transparent;border:1px solid var(--border);color:var(--text);padding:6px 12px;border-radius:10px;cursor:pointer}
     .lang button.active{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold-weak) inset}
+
     .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center;background:linear-gradient(180deg,#0f172a,#0c1222);border:1px solid var(--border);border-radius:16px;padding:22px}
     .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.04);margin-right:8px;margin-bottom:8px}
     .gold{color:var(--gold)}
     h1{font-size:clamp(26px,4vw,40px);line-height:1.1;margin:.2em 0 .3em}
     p.muted{color:var(--muted)}
+
     .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid var(--border);background:transparent;color:var(--text);cursor:pointer}
     .btn.primary{background:linear-gradient(180deg,var(--brand),#3be173);color:#001109;border:none}
     .btn.tiktok{border:1px solid var(--gold)}
     .btn.facebook{border:1px solid var(--gold)}
     .btn svg{width:18px;height:18px}
+
+    .actions{display:flex;flex-wrap:wrap;gap:10px}
+
     .grid{display:grid;gap:16px}
     .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px}
     .section h2{font-size:clamp(22px,3vw,28px);margin:0 0 6px;border-bottom:1px solid var(--border);padding-bottom:8px}
@@ -50,13 +56,20 @@
     .price-item:last-child{border-bottom:none}
     .two-col{grid-template-columns:1fr 1fr}
     @media (max-width:900px){.hero{grid-template-columns:1fr}.two-col{grid-template-columns:1fr}}
+
+    /* info cards */
     .info-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:10px}
     .info-card{display:flex;gap:12px;align-items:flex-start;padding:12px;border:1px solid var(--border);border-radius:12px;background:#0f172a}
     .icon{width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;background:var(--gold-weak)}
     .icon span{font-size:18px}
     .info-card b{display:block;margin-bottom:2px;color:var(--gold)}
+
+    /* map */
     .map{margin-top:10px;width:100%;aspect-ratio:16/10;border:0;border-radius:14px}
+
     footer{margin-top:36px;padding:16px;border-top:1px solid var(--border);color:#a8b3c7;text-align:center}
+
+    /* Floating dock */
     .floating-dock{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:12px;z-index:50}
     .floating-dock a{width:54px;height:54px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#101828;border:1px solid var(--border);box-shadow:0 6px 18px rgba(0,0,0,.35);backdrop-filter:blur(6px)}
     .floating-dock a:hover{transform:translateY(-2px)}
@@ -73,9 +86,9 @@
         <span class="logo-dot" aria-hidden="true"></span>
         <span class="brand-name">Car World</span>
       </div>
-      <div class="lang">
-        <button class="active" data-lang="pl">PL</button>
-        <button data-lang="ru">RU</button>
+      <div class="lang" aria-label="Language switcher">
+        <button class="active" data-lang="pl" type="button">PL</button>
+        <button data-lang="ru" type="button">RU</button>
       </div>
     </div>
   </header>
@@ -91,10 +104,11 @@
         </div>
         <h1 id="h1">Serwis samochodowy i wulkanizacja — Kiekrz</h1>
         <p id="hero-p" class="muted">Diagnostyka, mechanika, wymiana oleju, wulkanizacja, naprawy. Uczciwie, terminowo i w dobrej cenie.</p>
-        <div class="grid" style="grid-auto-flow:column;grid-auto-columns:max-content;gap:10px;">
-          <a id="btn-call" class="btn primary" href="tel:+48662839284">📞 Zadzwoń: +48 662 839 284</a>
+
+        <div class="actions">
+          <a id="btn-call" class="btn primary" href="tel:+48662839284" aria-label="Call Car World">📞 Zadzwoń: +48 662 839 284</a>
           <a id="btn-wa" class="btn" href="https://wa.me/48662839284" target="_blank" rel="noopener" title="WhatsApp">💬 WhatsApp</a>
-          <a class="btn" href="#map">📍 Dojazd</a>
+          <a id="btn-route" class="btn" href="#map">📍 Dojazd</a>
           <a class="btn tiktok" href="https://www.tiktok.com/@pavlo.kharlamov" target="_blank" rel="noopener" title="TikTok">🎵 TikTok</a>
           <a class="btn facebook" href="https://www.facebook.com/share/1CSPsJcDUH/" target="_blank" rel="noopener" title="Facebook">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 9H16V6h-2.5C11.6 6 11 7.6 11 9.3V11H9v3h2v6h3v-6h2.1l.4-3H14v-1.5c0-.9.2-1.5 1.5-1.5Z"/></svg>
@@ -102,9 +116,10 @@
           </a>
         </div>
       </div>
+
       <div class="card">
         <b class="gold">Car World</b>
-        <p class="muted" style="margin-top:6px">Serwis samochodowy, wulkanizacja • ul. Poznańska 23, 62-090 Kiekrz</p>
+        <p id="card-desc" class="muted" style="margin-top:6px">Serwis samochodowy, wulkanizacja • ul. Poznańska 23, 62-090 Kiekrz</p>
         <p class="muted">NIP: 7792561277 • e-mail: <a href="mailto:carworld.kiekrz@gmail.com">carworld.kiekrz@gmail.com</a></p>
       </div>
     </section>
@@ -199,7 +214,7 @@
           <div class="icon"><span>👍</span></div>
           <div>
             <b id="fb-label">Facebook</b>
-            <a href="https://www.facebook.com/share/1CSPsJcDUH/" target="_blank" rel="noopener">Odwiedź nas na Facebooku</a>
+            <a id="fb-visit" href="https://www.facebook.com/share/1CSPsJcDUH/" target="_blank" rel="noopener">Odwiedź nas na Facebooku</a>
           </div>
         </div>
         <div class="info-card">
@@ -215,13 +230,168 @@
     <!-- Mapa -->
     <section class="section card" id="map" style="margin-top:14px">
       <h2 id="map-h2">Mapa</h2>
-      <iframe class="map" src="https://www.google.com/maps?q=Poznańska+23,+Kiekrz&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe class="map" src="https://www.google.com/maps?q=Poznańska+23,+Kiekrz&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Mapa dojazdu"></iframe>
     </section>
   </main>
 
   <!-- Floating dock -->
   <div class="floating-dock" aria-label="Szybki kontakt">
     <a id="dock-wa" class="dock-wa" href="https://wa.me/48662839284" target="_blank" rel="noopener" title="Napisz na WhatsApp">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A10 10 0 0 0 3.4 16.9L2 22l5.3-1.4A10 10 0 1 0 20.5 3.5ZM12 20a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm4.4-5.8c-.2-.1-1.2-.6-1.4-.7s-.3-.1-.5.1-.5.7-.7.8-.3.1-.5 0a6.4 6.4 0 0 1-1.9-1.2 7 7 0
+      <!-- WhatsApp icon -->
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A10 10 0 0 0 3.4 16.9L2 22l5.3-1.4A10 10 0 1 0 20.5 3.5ZM12 20a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm4.4-5.8c-.2-.1-1.2-.6-1.4-.7s-.3-.1-.5.1-.5.7-.7.8-.3.1-.5 0a6.4 6.4 0 0 1-1.9-1.2 7 7 0 0 1-1.3-1.6c-.1-.2 0-.3.1-.5l.4-.5c.1-.2.2-.3.3-.5l.1-.2c0-.2 0-.4-.1-.5l-.7-1.6c-.2-.4-.4-.3-.6-.3h-.5a1 1 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2c0 1.2.8 2.4.9 2.6.1.2 1.6 2.6 3.9 3.6.5.2.9.4 1.2.5.5.2 1 .2 1.4.1.4-.1 1.2-.5 1.4-1s.2-1 .1-1.1c0 0-.1-.1-.3-.2Z"/></svg>
+    </a>
+    <a class="dock-tk" href="https://www.tiktok.com/@pavlo.kharlamov" target="_blank" rel="noopener" title="TikTok">
+      <!-- TikTok icon -->
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 3c.3 2.3 1.7 4 3.8 4.3v2.6c-1.5 0-2.9-.5-4-1.3v5.7c0 3.7-2.5 5.7-5.3 5.7A5.3 5.3 0 0 1 3.7 14c0-3.2 2.8-5.1 6.2-4.5v2.6c-1.6-.5-3.4.3-3.6 1.9-.3 1.7.9 3.1 2.6 3.1 1.6 0 2.6-1 2.6-2.8V3h2.4z"/></svg>
+    </a>
+    <a class="dock-fb" href="https://www.facebook.com/share/1CSPsJcDUH/" target="_blank" rel="noopener" title="Facebook">
+      <!-- Facebook icon -->
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 9H16V6h-2.5C11.6 6 11 7.6 11 9.3V11H9v3h2v6h3v-6h2.1l.4-3H14v-1.5c0-.9.2-1.5 1.5-1.5Z"/></svg>
+    </a>
+  </div>
 
+  <footer>
+    © <span id="year"></span> Car World — Kiekrz • NIP: 7792561277 • 
+    <a href="https://www.tiktok.com/@pavlo.kharlamov" target="_blank" rel="noopener">TikTok</a> •
+    <a href="https://www.facebook.com/share/1CSPsJcDUH/" target="_blank" rel="noopener">Facebook</a>
+  </footer>
 
+  <script>
+    // Rok w stopce
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Тексты PL/RU + авто-сообщение WhatsApp + мета/OG
+    const T = {
+      pl: {
+        b1:"Gwarancja na usługi", b2:"Szybkie terminy", b3:"PL / RU",
+        h1:"Serwis samochodowy i wulkanizacja — Kiekrz",
+        hero_p:"Diagnostyka, mechanika, wymiana oleju, wulkanizacja, naprawy. Uczciwie, terminowo i w dobrej cenie.",
+        card_desc:"Serwis samochodowy, wulkanizacja • ul. Poznańska 23, 62-090 Kiekrz",
+        services_h2:"Cennik usług", wulkanizacja_h2:"Wulkanizacja", wash_h2:"Mycie samochodu",
+        contact_h2:"Kontakt", map_h2:"Mapa",
+        phone_label:"Telefon", address_label:"Adres", email_label:"E-mail", hours_label:"Godziny",
+        hours_lines:"Pn–Pt 09:00–18:00<br/> Sb 10:00–14:00<br/> Nd nieczynne",
+        tiktok_label:"TikTok", fb_label:"Facebook",
+        fb_visit:"Odwiedź nas na Facebooku",
+        call_btn:"📞 Zadzwoń: +48 662 839 284",
+        route_btn:"📍 Dojazd",
+        wa_msg:"Dzień%20dobry,%20chciałbym%20umówić%20wizytę%20w%20Car%20World%20Kiekrz.",
+        meta:{
+          title:"Car World — Serwis i Wulkanizacja | Kiekrz",
+          description:"Car World — serwis samochodowy i wulkanizacja. Diagnostyka komputerowa, mechanika, wymiana oleju. Kiekrz, ul. Poznańska 23. Telefon: +48 662 839 284",
+          ogTitle:"Car World — Serwis i Wulkanizacja",
+          ogDescription:"Kiekrz, Poznańska 23. Zadzwoń: +48 662 839 284 • carworld.kiekrz@gmail.com",
+          ogLocale:"pl_PL"
+        }
+      },
+      ru: {
+        b1:"Гарантия на работы", b2:"Быстрые сроки", b3:"PL / RU",
+        h1:"Автосервис и вулканизация — Кекш",
+        hero_p:"Диагностика, механика, замена масла, вулканизация, ремонты. Честно, вовремя и по разумной цене.",
+        card_desc:"Автосервис, вулканизация • ul. Poznańska 23, 62-090 Kiekrz",
+        services_h2:"Прайс-лист услуг", wulkanizacja_h2:"Вулканизация", wash_h2:"Мойка автомобиля",
+        contact_h2:"Контакты", map_h2:"Карта",
+        phone_label:"Телефон", address_label:"Адрес", email_label:"E-mail", hours_label:"Часы",
+        hours_lines:"Пн–Пт 09:00–18:00<br/> Сб 10:00–14:00<br/> Вс выходной",
+        tiktok_label:"TikTok", fb_label:"Facebook",
+        fb_visit:"Мы на Facebook",
+        call_btn:"📞 Позвонить: +48 662 839 284",
+        route_btn:"📍 Маршрут",
+        wa_msg:"Добрый%20день,%20хочу%20записаться%20на%20визит%20в%20Car%20World%20Kiekrz.",
+        meta:{
+          title:"Car World — Автосервис и вулканизация | Кекш",
+          description:"Car World — автосервис и вулканизация. Компьютерная диагностика, механика, замена масла. Кекш, ul. Poznańska 23. Тел.: +48 662 839 284",
+          ogTitle:"Car World — Автосервис и вулканизация",
+          ogDescription:"Кекш, Poznańska 23. Тел.: +48 662 839 284 • carworld.kiekrz@gmail.com",
+          ogLocale:"ru_RU"
+        }
+      }
+    };
+
+    const $ = (id) => document.getElementById(id);
+    const qs = (sel) => document.querySelector(sel);
+
+    function setMeta(meta){
+      if(!meta) return;
+      document.title = meta.title || document.title;
+      const md = qs('meta[name="description"]');
+      if(md) md.setAttribute('content', meta.description || '');
+      const ogt = qs('meta[property="og:title"]');
+      if(ogt) ogt.setAttribute('content', meta.ogTitle || meta.title || '');
+      const ogd = qs('meta[property="og:description"]');
+      if(ogd) ogd.setAttribute('content', meta.ogDescription || meta.description || '');
+      const ogl = qs('meta[property="og:locale"]');
+      if(ogl) ogl.setAttribute('content', meta.ogLocale || 'pl_PL');
+    }
+
+    function setLang(lang){
+      const t = T[lang];
+      if(!t) return;
+
+      // html lang
+      document.documentElement.setAttribute('lang', lang === 'ru' ? 'ru' : 'pl');
+
+      // hero & badges
+      $('b1').textContent = t.b1;
+      $('b2').textContent = t.b2;
+      $('b3').textContent = t.b3;
+      $('h1').textContent = t.h1;
+      $('hero-p').textContent = t.hero_p;
+      $('card-desc').textContent = t.card_desc;
+
+      // sections
+      $('services-h2').textContent = t.services_h2;
+      $('wulkanizacja-h2').textContent = t.wulkanizacja_h2;
+      $('wash-h2').textContent = t.wash_h2;
+      $('contact-h2').textContent = t.contact_h2;
+      $('map-h2').textContent = t.map_h2;
+
+      // labels
+      $('phone-label').textContent = t.phone_label;
+      $('address-label').textContent = t.address_label;
+      $('email-label').textContent = t.email_label;
+      $('hours-label').textContent = t.hours_label;
+      $('tiktok-label').textContent = t.tiktok_label;
+      $('fb-label').textContent = t.fb_label;
+      $('hours-lines').innerHTML = t.hours_lines;
+      const fbVisit = $('fb-visit'); if(fbVisit) fbVisit.textContent = t.fb_visit;
+
+      // buttons
+      $('btn-call').textContent = t.call_btn;
+      const routeBtn = $('btn-route'); if(routeBtn) routeBtn.textContent = t.route_btn;
+
+      // WhatsApp ссылки с автотекстом
+      const wa = `https://wa.me/48662839284?text=${t.wa_msg}`;
+      $('btn-wa').href = wa;
+      $('wa-link').href = wa;
+      $('dock-wa').href = wa;
+
+      // мета и OG
+      setMeta(t.meta);
+
+      // активная кнопка языка
+      document.querySelectorAll(".lang button").forEach(b=>b.classList.toggle("active", b.dataset.lang===lang));
+
+      // сохранить выбор
+      try { localStorage.setItem('site_lang', lang); } catch(e){}
+    }
+
+    // переключение языка по клику
+    document.querySelectorAll(".lang button").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        setLang(btn.dataset.lang);
+      });
+    });
+
+    // Domyślnie PL или сохранённый выбор
+    (function initLang(){
+      let lang = 'pl';
+      try {
+        const saved = localStorage.getItem('site_lang');
+        if(saved && (saved==='pl' || saved==='ru')) lang = saved;
+      } catch(e){}
+      setLang(lang);
+    })();
+  </script>
+</body>
+</html>
