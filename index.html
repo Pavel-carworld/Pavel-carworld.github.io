@@ -3,34 +3,68 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Warsztat Samochodowy — Serwis i Wulkanizacja | Kiekrz</title>
-  <meta name="description" content="Serwis samochodowy, diagnostyka komputerowa, mechanika, wymiana oleju, wulkanizacja. Kiekrz, Poznańska 23. Telefon: +48 662 839 284" />
-  <meta property="og:title" content="Warsztat Samochodowy — Serwis i Wulkanizacja" />
-  <meta property="og:description" content="Kiekrz, Poznańska 23. Zadzwoń: +48 662 839 284" />
+  <title>Car World — Serwis i Wulkanizacja | Kiekrz</title>
+  <meta name="description" content="Car World — serwis samochodowy i wulkanizacja. Diagnostyka komputerowa, mechanika, wymiana oleju. Kiekrz, ul. Poznańska 23. Telefon: +48 662 839 284" />
+  <meta property="og:title" content="Car World — Serwis i Wulkanizacja" />
+  <meta property="og:description" content="Kiekrz, Poznańska 23. Zadzwoń: +48 662 839 284 • carworld.kiekrz@gmail.com" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pl_PL" />
-  <meta name="theme-color" content="#0ea5e9" />
+  <meta name="theme-color" content="#0b1220" />
   <style>
-    body {font-family: Arial, sans-serif; margin:0; background:#0b1220; color:#f7fafc;}
-    header {background:#0e1726; padding:15px; position:sticky; top:0;}
-    header .nav {display:flex; justify-content:space-between; align-items:center; max-width:1100px; margin:0 auto;}
-    .brand {font-weight:700; font-size:20px;}
-    .lang button {margin-left:8px; padding:6px 12px; border-radius:6px; border:1px solid #38bdf8; background:transparent; color:#f7fafc; cursor:pointer;}
-    .lang button.active {background:#38bdf8; color:#000;}
-    main {max-width:1100px; margin:0 auto; padding:20px;}
-    h1 {font-size:28px; margin:10px 0;}
-    h2 {margin-top:30px; border-bottom:1px solid #38bdf8; padding-bottom:6px;}
-    .price-list {margin-top:10px;}
-    .price-item {display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px dashed rgba(255,255,255,.2);}
-    .contact, .hours {margin-top:10px;}
-    .map {margin-top:20px; width:100%; height:300px; border:0; border-radius:10px;}
-    footer {margin-top:40px; padding:15px; background:#0e1726; text-align:center; font-size:14px; color:#aaa;}
+    :root{
+      --bg:#0b1220;         /* фон */
+      --card:#111827;       /* карточки */
+      --text:#f7fafc;       /* основной текст */
+      --muted:#cbd5e1;      /* вторичный текст */
+      --brand:#22c55e;      /* зелёный бренд */
+      --gold:#f5c542;       /* золотистые акценты */
+      --gold-weak:#f5c54222;
+      --border:rgba(255,255,255,.14);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--brand);text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:22px}
+    header{position:sticky;top:0;background:#0d1425cc;backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo-dot{width:12px;height:12px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 4px #1a2d1f inset}
+    .brand-name{font-weight:900;letter-spacing:.3px;color:var(--brand);font-size:20px}
+    .lang{display:flex;gap:8px}
+    .lang button{background:transparent;border:1px solid var(--border);color:var(--text);padding:6px 12px;border-radius:10px;cursor:pointer}
+    .lang button.active{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold-weak) inset}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center;background:linear-gradient(180deg,#0f172a,#0c1222);border:1px solid var(--border);border-radius:16px;padding:22px}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.04);margin-right:8px;margin-bottom:8px}
+    .gold{color:var(--gold)}
+    h1{font-size:clamp(26px,4vw,40px);line-height:1.1;margin:.2em 0 .3em}
+    p.muted{color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid var(--border);background:transparent;color:var(--text);cursor:pointer}
+    .btn.primary{background:linear-gradient(180deg,var(--brand),#3be173);color:#001109;border:none}
+    .grid{display:grid;gap:16px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px}
+    .section h2{font-size:clamp(22px,3vw,28px);margin:0 0 6px;border-bottom:1px solid var(--border);padding-bottom:8px}
+    .price-item{display:flex;justify-content:space-between;gap:16px;padding:8px 0;border-bottom:1px dashed var(--border)}
+    .price-item:last-child{border-bottom:none}
+    .two-col{grid-template-columns:1fr 1fr}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.two-col{grid-template-columns:1fr}}
+    /* info cards */
+    .info-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:10px}
+    .info-card{display:flex;gap:12px;align-items:flex-start;padding:12px;border:1px solid var(--border);border-radius:12px;background:#0f172a}
+    .icon{width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;background:var(--gold-weak)}
+    .icon span{font-size:18px}
+    .info-card b{display:block;margin-bottom:2px;color:var(--gold)}
+    /* map */
+    .map{margin-top:10px;width:100%;aspect-ratio:16/10;border:0;border-radius:14px}
+    footer{margin-top:36px;padding:16px;border-top:1px solid var(--border);color:#a8b3c7;text-align:center}
   </style>
 </head>
 <body>
   <header>
-    <div class="nav">
-      <div class="brand">Warsztat Samochodowy</div>
+    <div class="container nav">
+      <div class="brand">
+        <span class="logo-dot" aria-hidden="true"></span>
+        <span class="brand-name">Car World</span>
+      </div>
       <div class="lang">
         <button class="active" data-lang="pl">PL</button>
         <button data-lang="ru">RU</button>
@@ -38,12 +72,33 @@
     </div>
   </header>
 
-  <main>
-    <h1 id="h1">Serwis samochodowy i wulkanizacja — Kiekrz</h1>
-    <p id="hero-p">Diagnostyka, mechanika, wymiana oleju, wulkanizacja, naprawy. Uczciwie, terminowo i w dobrej cenie.</p>
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <div>
+          <span class="badge">✅ <span id="b1">Gwarancja na usługi</span></span>
+          <span class="badge">⏱️ <span id="b2">Szybkie terminy</span></span>
+          <span class="badge">💬 <span id="b3">PL / RU</span></span>
+        </div>
+        <h1 id="h1">Serwis samochodowy i wulkanizacja — Kiekrz</h1>
+        <p id="hero-p" class="muted">Diagnostyka, mechanika, wymiana oleju, wulkanizacja, naprawy. Uczciwie, terminowo i w dobrej cenie.</p>
+        <div class="grid" style="grid-auto-flow:column;grid-auto-columns:max-content;gap:10px;flex-wrap:wrap">
+          <a class="btn primary" href="tel:+48662839284">📞 Zadzwoń: +48 662 839 284</a>
+          <a class="btn" href="https://wa.me/48662839284" target="_blank" rel="noopener">💬 WhatsApp</a>
+          <a class="btn" href="#map">📍 Dojazd</a>
+        </div>
+      </div>
+      <div class="card">
+        <b class="gold">Car World</b>
+        <p class="muted" style="margin-top:6px">Serwis samochodowy, wulkanizacja • ul. Poznańska 23, 62-090 Kiekrz</p>
+        <p class="muted">NIP: 7792561277 • e-mail: <a href="mailto:carworld.kiekrz@gmail.com">carworld.kiekrz@gmail.com</a></p>
+      </div>
+    </section>
 
-    <h2 id="services-h2">Cennik usług</h2>
-    <div class="price-list">
+    <!-- Cennik -->
+    <section class="section card" style="margin-top:14px">
+      <h2 id="services-h2">Cennik usług</h2>
       <div class="price-item"><span>Diagnostyka podwozie</span><b>100 zł</b></div>
       <div class="price-item"><span>Diagnostyka komputerowa</span><b>150 zł</b></div>
       <div class="price-item"><span>Wymiana oleju</span><b>od 150 zł</b></div>
@@ -55,90 +110,146 @@
       <div class="price-item"><span>Wymiana silnika</span><b>od 2000 zł</b></div>
       <div class="price-item"><span>Naprawa turbiny</span><b>od 1000 zł</b></div>
       <div class="price-item"><span>Naprawa maglownicy</span><b>od 500 zł</b></div>
-      <div class="price-item"><span>Naprawa generatora/rozrusznika</span><b>od 150 zł</b></div>
+      <div class="price-item"><span>Naprawa generatora / rozrusznika</span><b>od 150 zł</b></div>
       <div class="price-item"><span>Naprawa układu wydechowego</span><b>od 100 zł</b></div>
       <div class="price-item"><span>Stawka godzinowa</span><b>180 zł/godz. brutto</b></div>
       <div class="price-item"><span>Wizyta mechanika</span><b>od 200 zł</b></div>
-    </div>
+    </section>
 
-    <h2 id="wulkanizacja-h2">Wulkanizacja</h2>
-    <div class="price-list">
-      <div class="price-item"><span>Łatka</span><b>od 70 zł</b></div>
-      <div class="price-item"><span>Koronka</span><b>40 zł</b></div>
-      <div class="price-item"><span>Skrawek</span><b>od 100 zł</b></div>
-      <div class="price-item"><span>Wymiana zaworu</span><b>20 zł</b></div>
-      <div class="price-item"><span>Wyważanie kół</span><b>od 25 zł</b></div>
-      <div class="price-item"><span>Wymiana koła</span><b>20 zł</b></div>
-      <div class="price-item"><span>Wymiana opony R13–R14</span><b>37,5 zł</b></div>
-      <div class="price-item"><span>R15</span><b>40 zł</b></div>
-      <div class="price-item"><span>R16</span><b>40 zł</b></div>
-      <div class="price-item"><span>R17</span><b>45 zł</b></div>
-      <div class="price-item"><span>R18</span><b>45 zł</b></div>
-      <div class="price-item"><span>R19</span><b>50 zł</b></div>
-      <div class="price-item"><span>R20</span><b>55 zł</b></div>
-      <div class="price-item"><span>R21</span><b>60 zł</b></div>
-      <div class="price-item"><span>Niski profil</span><b>+5 zł/opona</b></div>
-      <div class="price-item"><span>Runflat</span><b>+10 zł/opona</b></div>
-    </div>
+    <!-- Wulkanizacja -->
+    <section class="section card" style="margin-top:14px">
+      <h2 id="wulkanizacja-h2">Wulkanizacja</h2>
+      <div class="two-col grid">
+        <div>
+          <div class="price-item"><span>Łatka</span><b>od 70 zł</b></div>
+          <div class="price-item"><span>Koronka</span><b>40 zł</b></div>
+          <div class="price-item"><span>Skrawek</span><b>od 100 zł</b></div>
+          <div class="price-item"><span>Wymiana zaworu</span><b>20 zł</b></div>
+          <div class="price-item"><span>Wyważanie kół</span><b>od 25 zł</b></div>
+          <div class="price-item"><span>Wymiana koła</span><b>20 zł</b></div>
+        </div>
+        <div>
+          <div class="price-item"><span>Wymiana opony R13–R14</span><b>37,5 zł</b></div>
+          <div class="price-item"><span>R15</span><b>40 zł</b></div>
+          <div class="price-item"><span>R16</span><b>40 zł</b></div>
+          <div class="price-item"><span>R17</span><b>45 zł</b></div>
+          <div class="price-item"><span>R18</span><b>45 zł</b></div>
+          <div class="price-item"><span>R19</span><b>50 zł</b></div>
+          <div class="price-item"><span>R20</span><b>55 zł</b></div>
+          <div class="price-item"><span>R21</span><b>60 zł</b></div>
+          <div class="price-item"><span>Niski profil</span><b>+5 zł/opona</b></div>
+          <div class="price-item"><span>Runflat</span><b>+10 zł/opona</b></div>
+        </div>
+      </div>
+    </section>
 
-    <h2>Mycie samochodu</h2>
-    <div class="price-list">
+    <!-- Mycie -->
+    <section class="section card" style="margin-top:14px">
+      <h2 id="wash-h2">Mycie samochodu</h2>
       <div class="price-item"><span>Mycie samochodu</span><b>od 100 zł</b></div>
-    </div>
+    </section>
 
-    <h2 id="contact-h2">Kontakt</h2>
-    <div class="contact">
-      <p><b>Adres:</b> Poznańska 23, 62-090 Kiekrz</p>
-      <p><b>Telefon:</b> <a href="tel:+48662839284">+48 662 839 284</a></p>
-      <p><b>Email:</b> <a href="mailto:kontakt@example.com">kontakt@example.com</a></p>
-      <p><b>NIP:</b> 7792561277</p>
-    </div>
+    <!-- Kontakty -->
+    <section class="section card" style="margin-top:14px">
+      <h2 id="contact-h2">Kontakt</h2>
+      <div class="info-cards">
+        <div class="info-card">
+          <div class="icon"><span>📞</span></div>
+          <div>
+            <b id="phone-label">Telefon</b>
+            <a href="tel:+48662839284">+48 662 839 284</a><br/>
+            <a href="https://wa.me/48662839284" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="icon"><span>📍</span></div>
+          <div>
+            <b id="address-label">Adres</b>
+            ul. Poznańska 23, 62-090 Kiekrz
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="icon"><span>✉️</span></div>
+          <div>
+            <b id="email-label">E-mail</b>
+            <a href="mailto:carworld.kiekrz@gmail.com">carworld.kiekrz@gmail.com</a>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="icon"><span>⏰</span></div>
+          <div>
+            <b id="hours-label">Godziny</b>
+            <div id="hours-lines">Pn–Pt 09:00–18:00<br/> Sb 10:00–14:00<br/> Nd nieczynne</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h2 id="map-h2">Mapa</h2>
-    <iframe class="map" src="https://www.google.com/maps?q=Poznańska+23,+Kiekrz&output=embed"></iframe>
+    <!-- Mapa -->
+    <section class="section card" id="map" style="margin-top:14px">
+      <h2 id="map-h2">Mapa</h2>
+      <iframe class="map" src="https://www.google.com/maps?q=Poznańska+23,+Kiekrz&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
   </main>
 
   <footer>
-    © <span id="year"></span> Warsztat Samochodowy — Kiekrz | NIP: 7792561277
+    © <span id="year"></span> Car World — Kiekrz • NIP: 7792561277
   </footer>
 
   <script>
-    // Ustawienie roku w stopce
+    // Rok w stopce
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Tłumaczenia PL/RU
+    // Teksty PL/RU
     const T = {
       pl: {
-        h1: "Serwis samochodowy i wulkanizacja — Kiekrz",
-        hero_p: "Diagnostyka, mechanika, wymiana oleju, wulkanizacja, naprawy. Uczciwie, terminowo i w dobrej cenie.",
-        services_h2: "Cennik usług",
-        wulkanizacja_h2: "Wulkanizacja",
-        contact_h2: "Kontakt",
-        map_h2: "Mapa"
+        b1:"Gwarancja na usługi", b2:"Szybkie terminy", b3:"PL / RU",
+        h1:"Serwis samochodowy i wulkanizacja — Kiekrz",
+        hero_p:"Diagnostyka, mechanika, wymiana oleju, wulkanizacja, naprawy. Uczciwie, terminowo i w dobrej cenie.",
+        services_h2:"Cennik usług",
+        wulkanizacja_h2:"Wulkanizacja",
+        wash_h2:"Mycie samochodu",
+        contact_h2:"Kontakt",
+        map_h2:"Mapa",
+        phone_label:"Telefon", address_label:"Adres", email_label:"E-mail", hours_label:"Godziny",
+        hours_lines:"Pn–Pt 09:00–18:00<br/> Sb 10:00–14:00<br/> Nd nieczynne"
       },
       ru: {
-        h1: "Автосервис и вулканизация — Кекш",
-        hero_p: "Диагностика, механика, замена масла, вулканизация, ремонты. Честно, вовремя и по разумной цене.",
-        services_h2: "Прайс-лист услуг",
-        wulkanizacja_h2: "Вулканизация",
-        contact_h2: "Контакты",
-        map_h2: "Карта"
+        b1:"Гарантия на работы", b2:"Быстрые сроки", b3:"PL / RU",
+        h1:"Автосервис и вулканизация — Кекш",
+        hero_p:"Диагностика, механика, замена масла, вулканизация, ремонты. Честно, вовремя и по разумной цене.",
+        services_h2:"Прайс-лист услуг",
+        wulkanizacja_h2:"Вулканизация",
+        wash_h2:"Мойка автомобиля",
+        contact_h2:"Контакты",
+        map_h2:"Карта",
+        phone_label:"Телефон", address_label:"Адрес", email_label:"E-mail", hours_label:"Часы",
+        hours_lines:"Пн–Пт 09:00–18:00<br/> Сб 10:00–14:00<br/> Вс выходной"
       }
     };
 
+    // Переключение языка
     document.querySelectorAll(".lang button").forEach(btn=>{
       btn.addEventListener("click", ()=>{
         document.querySelectorAll(".lang button").forEach(b=>b.classList.remove("active"));
         btn.classList.add("active");
-        const t=T[btn.dataset.lang];
-        if(!t) return;
-        document.getElementById("h1").textContent = t.h1;
-        document.getElementById("hero-p").textContent = t.hero_p;
-        document.getElementById("services-h2").textContent = t.services_h2;
-        document.getElementById("wulkanizacja-h2").textContent = t.wulkanizacja_h2;
-        document.getElementById("contact-h2").textContent = t.contact_h2;
-        document.getElementById("map-h2").textContent = t.map_h2;
-      })
+        const t=T[btn.dataset.lang] || T.pl;
+        document.getElementById("b1").textContent=t.b1;
+        document.getElementById("b2").textContent=t.b2;
+        document.getElementById("b3").textContent=t.b3;
+        document.getElementById("h1").textContent=t.h1;
+        document.getElementById("hero-p").textContent=t.hero_p;
+        document.getElementById("services-h2").textContent=t.services_h2;
+        document.getElementById("wulkanizacja-h2").textContent=t.wulkanizacja_h2;
+        document.getElementById("wash-h2").textContent=t.wash_h2;
+        document.getElementById("contact-h2").textContent=t.contact_h2;
+        document.getElementById("map-h2").textContent=t.map_h2;
+        document.getElementById("phone-label").textContent=t.phone_label;
+        document.getElementById("address-label").textContent=t.address_label;
+        document.getElementById("email-label").textContent=t.email_label;
+        document.getElementById("hours-label").textContent=t.hours_label;
+        document.getElementById("hours-lines").innerHTML=t.hours_lines;
+      });
     });
   </script>
 </body>
